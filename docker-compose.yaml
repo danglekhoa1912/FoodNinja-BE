@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  dev-dtabase:
+    platform: linux/x86_64
+    image: mysql:8.0
+    restart: always
+    container_name: dev-database
+    environment:
+      - MYSQL_DATABASE=food_ninja
+      - MYSQL_ROOT_PASSWORD=123456
+    ports:
+      - '3306:3306'
+    networks:
+      - food_ninja-network
+networks:
+  food_ninja-network:
