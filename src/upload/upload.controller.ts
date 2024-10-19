@@ -7,7 +7,7 @@ import {
   UseInterceptors,
 } from '@nestjs/common';
 import { FileInterceptor } from '@nestjs/platform-express';
-import { MAX_FILE_SIZE } from 'src/common/constants/constants';
+import { MAX_FILE_SIZE } from '../common/constants/constants';
 import { UploadService } from './upload.service';
 
 @Controller('upload')
